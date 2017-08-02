@@ -14,8 +14,9 @@
 }
 
 .list-element{
-	border: 1px solid transparent;
-	
+	border-left: 1px;
+	border-right: 1px;
+	border-color: transparent;
 }
 
 .list-element:hover{

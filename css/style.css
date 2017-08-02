@@ -107,7 +107,8 @@ header {background: url(../images/shaban_main.jpg) no-repeat scroll center cente
     float: none;
     height: 50px;
     text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto;
+    }
     header nav a {
       line-height: 50px;
       margin: 0 10px; }
@@ -120,7 +121,12 @@ header {background: url(../images/shaban_main.jpg) no-repeat scroll center cente
     header.smaller nav {
       height: 35px; }
       header.smaller nav a {
-        line-height: 35px; } }
+        line-height: 35px; }
+       header #bs-example-navbar-collapse-1{
+             background-color: #000000;
+             opacity: 0.7;
+        } 
+    }
 
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background: none;}
