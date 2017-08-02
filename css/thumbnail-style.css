@@ -12,3 +12,14 @@
 .li-text-style a{
 	color: #FFDE00;
 }
+
+.list-element{
+	border: 1px solid transparent;
+	
+}
+
+.list-element:hover{
+	border-color: #FFDE00;
+	transition: 2s;
+	
+}
