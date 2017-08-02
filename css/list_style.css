@@ -1,0 +1,42 @@
+.push {
+  list-style: none;
+  font-family: "Lucida Sans";
+}
+.push li {
+  position: relative;
+  padding: 10px 0 20px 20px;
+  color: #000000;
+  font-variant: small-caps;
+  font-weight: lighter;
+  font-size: 24px;
+  text-align: left;
+}
+.push li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 10px;
+}
+.push li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 10px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
+.push li:last-child:after {content: none;}
+
+.price-box {
+  padding: 50px 0px 0px;
+  font-variant: small-caps;
+  font-family: Palatino Linotype;
+  font-size: 100px;
+}
