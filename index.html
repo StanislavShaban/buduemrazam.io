@@ -31,7 +31,7 @@
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
     <![endif]-->
-	
+	<script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
 
  <body>
@@ -81,7 +81,50 @@
 	
 	
 </header>
-<div class="header-text">
+<div id="paypal-button-container"></div>
+
+    <script>
+        paypal.Button.render({
+
+            env: 'sandbox', // sandbox | production
+
+            // PayPal Client IDs - replace with your own
+            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+            client: {
+                sandbox:    'AbSFF70hsfeecYb6EFUpXsxNwlmBZTM39cuXzxcy7AY-IQVjhyhZTA5iKAdrhgWlj1CQUzo79aHCoY1z'
+            },
+
+            // Show the buyer a 'Pay Now' button in the checkout flow
+            commit: true,
+
+            // payment() is called when the button is clicked
+            payment: function(data, actions) {
+
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: { total: '100.00', currency: 'USD' }
+                            }
+                        ]
+                    }
+                });
+            },
+
+            // onAuthorize() is called when the buyer approves the payment
+            onAuthorize: function(data, actions) {
+
+                // Make a call to the REST api to execute the payment
+                return actions.payment.execute().then(function() {
+                    window.alert('Payment Complete!');
+                });
+            }
+
+        }, '#paypal-button-container');
+
+    </script>
+	<div class="header-text">
 		<div class="col-md-12 text-center">
 			<h1 class="hidden-xs" style="color:#f71a1a">Объективно<span style="color: #FFDE00;font-size: 45px;">.</span> Честно<span style="color: #FFDE00;font-size: 45px;">.</span> Профессионально</h1>
 			<hr>
