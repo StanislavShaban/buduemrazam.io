@@ -24,7 +24,6 @@
 }
 .push li:after {
   position: absolute;
-  border-left: 1px dotted #4F5151;
   width: 1px;
   bottom: -12px;
   content: "";
