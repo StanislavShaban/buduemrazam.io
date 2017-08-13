@@ -191,7 +191,7 @@ header {background: url(../images/shaban_main.jpg) no-repeat scroll center cente
             top: 0%;
         }
 
-        
+        header .navbar-default .nav li a:last-child{color: white;}
     }
 
 .thumb-style{
