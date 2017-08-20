@@ -120,7 +120,15 @@ hr{max-width: 50px;
     margin-top: 20px;
 }
 
-div.contacts a,p{
+div.contacts a{
+    float: left;
+    margin-left: 50pt;
+    font-size: 16px;
+    line-height: auto;
+    color: black;
+}
+
+div.contacts p{
     float: left;
     margin-left: 50pt;
     font-size: 16px;
@@ -204,7 +212,11 @@ header {background: url(../images/shaban_main.jpg) no-repeat scroll center cente
 
         
 
-        header div.contacts a, p{
+        header div.contacts a{
+            display: none;
+        }
+
+        header div.contacts p{
             display: none;
         }
 
