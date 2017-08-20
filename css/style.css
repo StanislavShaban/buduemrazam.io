@@ -207,9 +207,7 @@ header {background: url(../images/shaban_main.jpg) no-repeat scroll center cente
         header div.contacts a, p{
             display: none;
         }
-    }
 
-    @media all and (max-width: 660px) {
         div.phone-icon{
             background-image: url("../images/phone.png");
             background-size: 100%;
